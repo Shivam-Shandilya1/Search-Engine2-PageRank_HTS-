@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.10.0" />
+<title>page_rank API documentation</title>
+<meta name="description" content="" />
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
+<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha256-Uv3H6lx7dJmRfRvH8TH6kJD1TSK1aFcwgx+mdg3epi8=" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>page_rank</code></h1>
+</header>
+<section id="section-intro">
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">import networkx as nx
+import random
+import numpy as np
+
+def pagerank(G, alpha=0.90, personalization=None,
+             max_iter=100, tol=1.0e-6, nstart=None, weight=&#39;weight&#39;,
+             dangling=None):
+    
+    if len(G) == 0:
+        return {}
+ 
+    if not G.is_directed():
+        D = G.to_directed()
+    else:
+        D = G
+ 
+    # Create a copy in (right) stochastic form
+    W = nx.stochastic_graph(D, weight=weight)
+    N = W.number_of_nodes()
+ 
+    # Choose fixed starting vector if not given
+    if nstart is None:
+        x = dict.fromkeys(W, 1.0 / N)
+    else:
+        # Normalized nstart vector
+        s = float(sum(nstart.values()))
+        x = dict((k, v / s) for k, v in nstart.items())
+ 
+    if personalization is None:
+ 
+        # Assign uniform personalization vector if not given
+        p = dict.fromkeys(W, 1.0 / N)
+    else:
+        missing = set(G) - set(personalization)
+        if missing:
+            raise nx.NetworkXError(&#39;Personalization dictionary &#39;
+                                &#39;must have a value for every node. &#39;
+                                &#39;Missing nodes %s&#39; % missing)
+        s = float(sum(personalization.values()))
+        p = dict((k, v / s) for k, v in personalization.items())
+ 
+    if dangling is None:
+ 
+        # Use personalization vector if dangling vector not specified
+        dangling_weights = p
+    else:
+        missing = set(G) - set(dangling)
+        if missing:
+            raise nx.NetworkXError(&#39;Dangling node dictionary &#39;
+                                &#39;must have a value for every node. &#39;
+                                &#39;Missing nodes %s&#39; % missing)
+        s = float(sum(dangling.values()))
+        dangling_weights = dict((k, v/s) for k, v in dangling.items())
+    dangling_nodes = [n for n in W if W.out_degree(n, weight=weight) == 0.0]
+ 
+    # power iteration: make up to max_iter iterations
+    for _ in range(max_iter):
+        xlast = x
+        x = dict.fromkeys(xlast.keys(), 0)
+        danglesum = alpha * sum(xlast[n] for n in dangling_nodes)
+        for n in x:
+ 
+            # this matrix multiply looks odd because it is
+            # doing a left multiply x^T=xlast^T*W
+            for nbr in W[n]:
+                x[nbr] += alpha * xlast[n] * W[n][nbr][weight]
+            x[n] += danglesum * dangling_weights[n] + (1.0 - alpha) * p[n]
+ 
+        # check convergence, l1 norm
+        err = sum([abs(x[n] - xlast[n]) for n in x])
+        if err &lt; N*tol:
+            return x
+    raise nx.NetworkXError(&#39;pagerank: power iteration failed to converge &#39;
+                        &#39;in %d iterations.&#39; % max_iter)
+    
+# Sort the nodes
+def nodes_sorted(g, points):
+    t = np.array(points)
+    t = np.argsort(-t)
+    return t
+  
+# Distribute points randomly in a graph
+def random_Walk(g):
+    rwp = [0 for i in range(g.number_of_nodes())]
+    nodes = list(g.nodes())
+    r = random.choice(nodes)
+    rwp[r] += 1
+    neigh = list(g.out_edges(r))
+    z = 0
+      
+    while (z != 10000):
+        if (len(neigh) == 0):
+            focus = random.choice(nodes)
+        else:
+            r1 = random.choice(neigh)
+            focus = r1[1]
+        rwp[focus] += 1
+        neigh = list(g.out_edges(focus))
+        z += 1
+    return rwp
+  
+  
+# Main
+# 1. Create a directed graph with N nodes
+g = nx.DiGraph()
+N = int(input(&#34;Enter Number of Node: &#34;))
+g.add_nodes_from(range(N))
+  
+# 2. Add directed edges in graph
+print(&#34;Add Edge until take -1 as input in both&#34;)
+flag = True
+while flag:
+    from_edge = int(input(&#34;Edge from: &#34;))
+    to_edge = int(input(&#34;Edge to: &#34;))
+    if(from_edge!=-1 and to_edge!=-1):
+        g.add_edge(from_edge,to_edge)
+        print(&#34;Edge from&#34;,from_edge,&#34;to&#34;,to_edge,&#34;have been drawn.&#34;)
+    else:
+        flag = False
+# 3. perform a random walk
+points = random_Walk(g)
+  
+# 4. Get nodes rank according to their random walk points
+sorted_by_points = nodes_sorted(g, points)
+print(&#34;PageRank using Random Walk Method&#34;)
+print(sorted_by_points)
+  
+# # p_dict is dictionary of tuples
+# p_dict = nx.pagerank(g)
+# p_sort = sorted(p_dict.items(), key=lambda x: x[1], reverse=True)
+  
+# print(&#34;PageRank using inbuilt pagerank method&#34;)
+# for i in p_sort:
+#     print(i[0], end=&#34;, &#34;)</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-functions">Functions</h2>
+<dl>
+<dt id="page_rank.nodes_sorted"><code class="name flex">
+<span>def <span class="ident">nodes_sorted</span></span>(<span>g, points)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def nodes_sorted(g, points):
+    t = np.array(points)
+    t = np.argsort(-t)
+    return t</code></pre>
+</details>
+</dd>
+<dt id="page_rank.pagerank"><code class="name flex">
+<span>def <span class="ident">pagerank</span></span>(<span>G, alpha=0.9, personalization=None, max_iter=100, tol=1e-06, nstart=None, weight='weight', dangling=None)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def pagerank(G, alpha=0.90, personalization=None,
+             max_iter=100, tol=1.0e-6, nstart=None, weight=&#39;weight&#39;,
+             dangling=None):
+    
+    if len(G) == 0:
+        return {}
+ 
+    if not G.is_directed():
+        D = G.to_directed()
+    else:
+        D = G
+ 
+    # Create a copy in (right) stochastic form
+    W = nx.stochastic_graph(D, weight=weight)
+    N = W.number_of_nodes()
+ 
+    # Choose fixed starting vector if not given
+    if nstart is None:
+        x = dict.fromkeys(W, 1.0 / N)
+    else:
+        # Normalized nstart vector
+        s = float(sum(nstart.values()))
+        x = dict((k, v / s) for k, v in nstart.items())
+ 
+    if personalization is None:
+ 
+        # Assign uniform personalization vector if not given
+        p = dict.fromkeys(W, 1.0 / N)
+    else:
+        missing = set(G) - set(personalization)
+        if missing:
+            raise nx.NetworkXError(&#39;Personalization dictionary &#39;
+                                &#39;must have a value for every node. &#39;
+                                &#39;Missing nodes %s&#39; % missing)
+        s = float(sum(personalization.values()))
+        p = dict((k, v / s) for k, v in personalization.items())
+ 
+    if dangling is None:
+ 
+        # Use personalization vector if dangling vector not specified
+        dangling_weights = p
+    else:
+        missing = set(G) - set(dangling)
+        if missing:
+            raise nx.NetworkXError(&#39;Dangling node dictionary &#39;
+                                &#39;must have a value for every node. &#39;
+                                &#39;Missing nodes %s&#39; % missing)
+        s = float(sum(dangling.values()))
+        dangling_weights = dict((k, v/s) for k, v in dangling.items())
+    dangling_nodes = [n for n in W if W.out_degree(n, weight=weight) == 0.0]
+ 
+    # power iteration: make up to max_iter iterations
+    for _ in range(max_iter):
+        xlast = x
+        x = dict.fromkeys(xlast.keys(), 0)
+        danglesum = alpha * sum(xlast[n] for n in dangling_nodes)
+        for n in x:
+ 
+            # this matrix multiply looks odd because it is
+            # doing a left multiply x^T=xlast^T*W
+            for nbr in W[n]:
+                x[nbr] += alpha * xlast[n] * W[n][nbr][weight]
+            x[n] += danglesum * dangling_weights[n] + (1.0 - alpha) * p[n]
+ 
+        # check convergence, l1 norm
+        err = sum([abs(x[n] - xlast[n]) for n in x])
+        if err &lt; N*tol:
+            return x
+    raise nx.NetworkXError(&#39;pagerank: power iteration failed to converge &#39;
+                        &#39;in %d iterations.&#39; % max_iter)</code></pre>
+</details>
+</dd>
+<dt id="page_rank.random_Walk"><code class="name flex">
+<span>def <span class="ident">random_Walk</span></span>(<span>g)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def random_Walk(g):
+    rwp = [0 for i in range(g.number_of_nodes())]
+    nodes = list(g.nodes())
+    r = random.choice(nodes)
+    rwp[r] += 1
+    neigh = list(g.out_edges(r))
+    z = 0
+      
+    while (z != 10000):
+        if (len(neigh) == 0):
+            focus = random.choice(nodes)
+        else:
+            r1 = random.choice(neigh)
+            focus = r1[1]
+        rwp[focus] += 1
+        neigh = list(g.out_edges(focus))
+        z += 1
+    return rwp</code></pre>
+</details>
+</dd>
+</dl>
+</section>
+<section>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3><a href="#header-functions">Functions</a></h3>
+<ul class="">
+<li><code><a title="page_rank.nodes_sorted" href="#page_rank.nodes_sorted">nodes_sorted</a></code></li>
+<li><code><a title="page_rank.pagerank" href="#page_rank.pagerank">pagerank</a></code></li>
+<li><code><a title="page_rank.random_Walk" href="#page_rank.random_Walk">random_Walk</a></code></li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.10.0</a>.</p>
+</footer>
+</body>
+</html>
